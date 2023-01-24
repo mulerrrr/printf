@@ -27,7 +27,7 @@ int (*find_function(const char *format))(va_list)
 	{
 		if (find_f[i].sc[0] == (*format))
 			return (find_f[i].f);
-		i++
+		i++;
 	}
 	return (NULL);
 }
