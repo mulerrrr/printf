@@ -16,6 +16,10 @@ int (*find_function(const char *format))(va_list)
 		{"d", print_dec},
 		{"i", print_int},
 		{"b", print_bin},
+		{"u", print_unsig},
+		{"o", print_octal},
+		{"x", print_x},
+		{"X", print_X},
 		{NULL, NULL}
 	};
 
@@ -23,7 +27,7 @@ int (*find_function(const char *format))(va_list)
 	{
 		if (find_f[i].sc[0] == (*format))
 			return (find_f[i].f);
-		i++;
+		i++
 	}
 	return (NULL);
 }
